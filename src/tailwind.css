@@ -14,7 +14,13 @@
   --color--gradient-primary-blue-shade-2: #0055a6;
   --color--gradient-secondary-blue-shade-1: #00c8ff;
   --color--gradient-secondary-blue-shade-2: #60c9e6;
-  --color-gray-white: #ffffffb2;
+  --color-gray-white: #f8f8f8;
+  --color-header-bg: #fffefd;
+  --gradient-header: linear-gradient(
+    90deg,
+    var(--color--gradient-primary-blue-shade-1),
+    var(--color--gradient-primary-blue-shade-2)
+  );
 
   --shadow-base: 5px 14px 45px 0 rgba(0, 0, 0, 0.6);
 
@@ -52,18 +58,8 @@
 
 @layer components {
   /* Component classes here */
-
-  .smart-suggestion-person {
-    @apply w-[389px] h-[479px];
-  }
-
-  .smart-suggestion-image-highlighter {
-    @apply w-[53px] h-[44px];
-  }
-
-  .smart-suggestion-effect {
-    z-index: -1;
-    position: relative;
+  html {
+    scroll-behavior: smooth;
   }
 }
 
@@ -153,5 +149,15 @@
 
   .input-field {
     @apply w-full px-4 py-3 rounded-xl bg-white/20 backdrop-blur-sm border border-white/30 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent;
+  }
+
+  .bg-gradient-header {
+    background: theme(--gradient-header);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .dotted-active-style {
+    background: theme(--gradient-header);
   }
 }

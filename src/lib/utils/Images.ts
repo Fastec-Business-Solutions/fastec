@@ -11,6 +11,7 @@ import Gdp from "../../assets/images/gdp.svg";
 import TallBuilding from "../../assets/images/tall-building.svg";
 import HandShake from "../../assets/images/hand-shake.svg";
 import Person3 from "../../assets/images/person-3.svg";
+import ServiceBg from "../../assets/images/services-bg.svg";
 
 interface ImageData {
   src: string;
@@ -69,5 +70,9 @@ export const Images = {
   Person3: {
     src: Person3,
     alt: "Person 3 image",
+  },
+  ServiceBg: {
+    src: ServiceBg,
+    alt: "Service Background",
   },
 } as const satisfies Record<string, ImageData>;

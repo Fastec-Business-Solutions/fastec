@@ -4,16 +4,16 @@ import TextArea from "./TextArea";
 interface DynamicFormBuilderProps {
   label: string;
   type: string;
-  required: boolean;
+  name: string;
 }
 
 const DynamicFormBuilder = (props: DynamicFormBuilderProps) => {
-  const { label, type, required } = props;
+  const { label, type, name } = props;
 
   if (type === "text" || type === "email" || type === "tel") {
     return (
       <>
-        <InputField type={type} required={required} label={label} />
+        <InputField type={type} label={label} name={name} />
       </>
     );
   }
@@ -21,7 +21,7 @@ const DynamicFormBuilder = (props: DynamicFormBuilderProps) => {
   if (type === "textarea") {
     return (
       <div className="w-full">
-        <TextArea required={required} label={label} />
+        <TextArea label={label} name={name} />
       </div>
     );
   }

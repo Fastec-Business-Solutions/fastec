@@ -1,6 +1,8 @@
 import Arrow from "../../assets/icons/arrow.svg";
 import Star from "../../assets/icons/star-1.svg";
 import Grow from "../../assets/icons/grow.svg";
+import Logo from "../../assets/icons/fastec-logo-1.svg";
+import Fastec from "../../assets/icons/fastec-logo-2.svg";
 
 interface IconData {
   src: string;
@@ -19,5 +21,13 @@ export const Icons = {
   Grow: {
     src: Grow,
     alt: "Grow icon",
+  },
+  Logo: {
+    src: Logo,
+    alt: "Fastec logo",
+  },
+  Fastec: {
+    src: Fastec,
+    alt: "Fastec",
   },
 } as const satisfies Record<string, IconData>;
