@@ -9,6 +9,9 @@ const Search = () => {
     "Region in Qatar",
     "Time slot for enquiry",
   ];
+  const handleRequestCallBack = () => {
+    window.location.href = "#contact-us";
+  };
   return (
     <div className="font-family-inter flex flex-row items-center justify-between w-[95%] md:w-[90%] mx-auto p-4 md:p-8 backdrop-blur-md shadow-base rounded-search bg-white">
       <ul className="flex max-[830px]:flex-col flex-row items-center justify-evenly w-full xl:w-[60%] lg:w-full">
@@ -35,6 +38,8 @@ const Search = () => {
             />
           }
           size="large"
+          onClick={handleRequestCallBack}
+          isPointer={true}
         />
       </div>
     </div>
