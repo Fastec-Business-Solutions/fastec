@@ -85,7 +85,9 @@ const ContactUs = () => {
     }
 
     // Validate phone number format
-    if (data.phoneNumber.length !== 10 || isNaN(Number(data.phoneNumber))) {
+    const phoneRegex = /^\+?[1-9][\d\s\-().]{7,19}$/;
+
+    if (!phoneRegex.test(data.phoneNumber)) {
       toast.error("Please enter a valid phone number", {
         position: "bottom-right",
       });
