@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
+import { generateMainPageSchema } from "../../lib/utils/seoUtils";
 
-interface SEOProps {
+interface SinglePageSEOProps {
   title?: string;
   description?: string;
   keywords?: string;
@@ -14,10 +15,10 @@ interface SEOProps {
   nofollow?: boolean;
 }
 
-const SEO: React.FC<SEOProps> = ({
+const SinglePageSEO: React.FC<SinglePageSEOProps> = ({
   title = "Fastec Business Solutions - Fast & Efficient Technology Solutions",
-  description = "Fastec Business Solutions provides cutting-edge technology solutions for businesses. We specialize in digital transformation, web development, and innovative tech solutions to help your business grow.",
-  keywords = "technology, digital transformation, web development, software solutions, business technology, IT services, Fastec Business Solutions",
+  description = "Transform your business with Fastec Business Solutions' cutting-edge technology solutions. We specialize in digital transformation, web development, and innovative tech solutions to accelerate your growth. Contact us for a free consultation.",
+  keywords = "technology solutions, digital transformation, web development, software solutions, business technology, IT services, Fastec Business Solutions, business consulting, technology consulting",
   author = "Fastec Business Solutions",
   ogImage = "/src/assets/images/fastec-logo-1.svg",
   ogUrl,
@@ -67,6 +68,16 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       
+      {/* Language and Region */}
+      <meta property="og:locale" content="en_US" />
+      <meta name="language" content="English" />
+      
+      {/* Mobile and App Specific */}
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-title" content="Fastec Business Solutions" />
+      
       {/* Structured Data for Organization */}
       <script type="application/ld+json">
         {JSON.stringify({
@@ -80,6 +91,44 @@ const SEO: React.FC<SEOProps> = ({
             "https://linkedin.com/company/fastec-business-solutions",
             "https://twitter.com/fastecbusiness",
             "https://facebook.com/fastecbusinesssolutions"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "availableLanguage": "English"
+          }
+        })}
+      </script>
+      
+      {/* Structured Data for WebPage */}
+      <script type="application/ld+json">
+        {JSON.stringify(generateMainPageSchema())}
+      </script>
+      
+      {/* Breadcrumb Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": baseUrl
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": `${baseUrl}/#services`
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Contact",
+              "item": `${baseUrl}/#contact`
+            }
           ]
         })}
       </script>
@@ -87,4 +136,4 @@ const SEO: React.FC<SEOProps> = ({
   );
 };
 
-export default SEO; 
+export default SinglePageSEO; 

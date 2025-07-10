@@ -10,12 +10,12 @@ import ContactUs from "./components/contactus/ContactUs";
 import FAQ from "./components/faq/FAQ";
 import HeroBanner from "./components/hero/HeroBanner";
 import Oppurtunities from "./components/oppurtunities/Oppurtunities";
-import { HomepageSEO } from "./components/common/SEOPresets";
+import SinglePageSEO from "./components/common/SinglePageSEO";
 
 const App = () => {
   return (
     <div>
-      <HomepageSEO />
+      <SinglePageSEO />
       <Header />
       <WhatsAppFloatingButton />
       <HeroBanner />
