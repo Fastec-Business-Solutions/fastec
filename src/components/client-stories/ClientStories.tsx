@@ -26,8 +26,8 @@ const stories: Story[] = [
 `,
     author: 'Mrs. Anna Tech Yu Yan (Singapore)',
     image: {
-      src: Images.Person4.src,
-      alt: Images.Person4.alt,
+      src: Images.Person3.src,
+      alt: Images.Person3.alt,
     },
   },
   {
@@ -39,8 +39,8 @@ const stories: Story[] = [
     `,
     author: 'Mrs. Fhranches Palattao Luyun (Philippines)',
     image: {
-      src: Images.Person5.src,
-      alt: Images.Person5.alt,
+      src: Images.Person4.src,
+      alt: Images.Person4.alt,
     },
   },
   {
@@ -53,8 +53,8 @@ const stories: Story[] = [
     `,
     author: 'Mrs. Kanyanat Meesaeng (Thailand)',
     image: {
-      src: Images.Person4.src,
-      alt: Images.Person4.alt,
+      src: Images.Person5.src,
+      alt: Images.Person5.alt,
     },
   },
   {
@@ -65,8 +65,8 @@ const stories: Story[] = [
     `,
     author: 'Mrs. Jenny Lou Collanter Adornado (Philippines)',
     image: {
-      src: Images.Person5.src,
-      alt: Images.Person5.alt,
+      src: Images.Person6.src,
+      alt: Images.Person6.alt,
     },
   },
   {
