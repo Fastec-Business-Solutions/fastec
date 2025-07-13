@@ -7,6 +7,7 @@ const Gdp = () => {
     <div className="relative w-[102px] md:w-[153px] lg:w-[204px] h-[123px] md:h-[185px] lg:h-[246px] overflow-visible">
       <div>
         <img
+          loading="lazy"
           src={Images.Gdp.src}
           alt={Images.Gdp.alt}
           className=" w-[102px] md:w-[153px] lg:w-auto"
@@ -17,6 +18,7 @@ const Gdp = () => {
           size="xlarge"
           icon={
             <img
+              loading="lazy"
               src={Icons.Grow.src}
               alt={Icons.Grow.alt}
               className="w-[20px] h-[20px] md:w-[30px] md:h-[30px] lg:w-[40px] lg:h-[40px]"

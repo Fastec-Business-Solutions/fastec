@@ -20,6 +20,7 @@ const FAQ = () => {
       </div>
       <FAQAccordion />
       <img
+        loading="lazy"
         src={Images.BackgroundEffect.src}
         alt={Images.BackgroundEffect.alt}
         className="absolute left-0 bottom-0 w-full pointer-events-none"

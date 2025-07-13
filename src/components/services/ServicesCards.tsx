@@ -31,6 +31,7 @@ const ServicesCards = () => {
     >
       <div className="absolute inset-0 -z-10">
         <img
+          loading="lazy"
           src={Images.ServiceBackground.src}
           alt={Images.ServiceBackground.alt}
           className="w-full h-full object-cover"
@@ -38,6 +39,7 @@ const ServicesCards = () => {
       </div>
       <div className="absolute left-0 bottom-0 w-full pointer-events-none -z-10">
         <img
+          loading="lazy"
           src={Images.BackgroundEffect.src}
           alt={Images.BackgroundEffect.alt}
           className="w-full"
