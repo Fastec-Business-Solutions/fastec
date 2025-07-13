@@ -1,23 +1,16 @@
 import { Images } from "../../lib/utils/Images";
+import type { Story } from "./ClientStories";
 
-const ExampleStory = () => {
+interface ExampleStoryProps {
+  story: Story;
+}
+const ExampleStory = ({ story }: ExampleStoryProps) => {
   return (
     <div className="relative max-md:w-full w-[674px] md:h-[304px] min-[530px]:h-[250px] font-family-inter bg-white min-[530px]:p-10 px-4 pt-5 pb-0 rounded-[30px]">
       <div className="min-[530px]:w-[60%] w-full flex flex-col justify-between h-full">
-        <p className="max-sm:text-xs max-md:text-sm">
-          Working with this team has been a{" "}
-          <span className="text-primary-text-blue font-bold">
-            game-changer for our business.
-          </span>{" "}
-          Their expertise, strategic guidance, and personalized approach helped
-          us streamline operations and expand into new markets seamlessly. Their{" "}
-          <span className="text-primary-text-blue font-bold">
-            commitment to our success
-          </span>{" "}
-          was evident at every step.
-        </p>
+        <p className="max-sm:text-xs max-md:text-sm">{story.content}</p>
         <p className="max-sm:text-xs max-md:text-sm max-[530px]:mt-4">
-          -John Doe, CEO <strong>XYZ</strong> Enterprises
+          -{story.author}
         </p>
       </div>
       <img
