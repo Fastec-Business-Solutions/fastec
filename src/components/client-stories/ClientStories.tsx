@@ -6,9 +6,60 @@ import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 import RoundedDesign from "../common/RoundedDesign";
 import ExampleStory from "./ExampleStory";
 
+export type Story = {
+  id: number;
+  content: string;
+  author: string;
+};
+
+const stories: Story[] = [
+  {
+    id: 1,
+    content: `FASTEC exceeded our expectations! Their expert advice and guidance transformed our business strategy, 
+    leading to significant growth and improved efficiency. Their team's professionalism, expertise, and dedication were outstanding. 
+    We highly recommend FASTEC to anyone seeking top-notch consultancy services.
+`,
+    author: "Mrs. Anna Tech Yu Yan ( Singapore)",
+  },
+  {
+    id: 2,
+    content: `
+    FASTEC made a real difference. Their expertise and professional approach boosted our efficiency and growth.
+     A trusted partner in every sense.
+
+    `,
+    author: "Mrs. Fhranches Palattao Luyun (Philippines)",
+  },
+  {
+    id: 3,
+    content: `
+    We are truly grateful for FASTEC’s support. 
+    Their expertise and professional commitment helped us achieve new levels of growth and efficiency. 
+    They’ve proven to be a reliable and valued partner every step of the way.
+
+    `,
+    author: "Mrs. Kanyanat Meesaeng (Thailand)",
+  },
+  {
+    id: 4,
+    content: `
+   FASTEC is more than just a consultancy — they’re a true partner in progress. 
+   Their knowledgeable team and strategic guidance led to measurable improvements in our operations and growth.
+    `,
+    author: "Mrs. Jenny Lou Collanter Adornado (Philippines)",
+  },
+  {
+    id: 5,
+    content: `
+    With FASTEC by our side, we experienced real transformation. Their support, expertise, and commitment helped our business move forward with confidence and success.
+    `,
+    author: "Mrs. Nurul Hafizah Binti Zakaria ( Malaysia)",
+  },
+];
+
 const ClientStories = () => {
   const [progress, setProgress] = useState(0);
-  const [imageIndex, setImageIndex] = useState(0);
+  const [storyIndex, setStoryIndex] = useState(0);
 
   useEffect(() => {
     const duration = 7000;
@@ -18,7 +69,7 @@ const ClientStories = () => {
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
-          setImageIndex((idx) => (idx + 1) % 3);
+          setStoryIndex((idx) => (idx + 1) % stories.length);
           return 0;
         }
         return prev + increment;
@@ -51,7 +102,7 @@ const ClientStories = () => {
               isTransparent={true}
               isPointer={true}
               onClick={() => {
-                setImageIndex((prev) => (prev - 1 + 3) % 3);
+                setStoryIndex((prev) => (prev - 1 + 3) % 3);
                 setProgress(0);
               }}
             />
@@ -60,7 +111,7 @@ const ClientStories = () => {
               size="large"
               isPointer={true}
               onClick={() => {
-                setImageIndex((prev) => (prev + 1) % 3);
+                setStoryIndex((prev) => (prev + 1) % 3);
                 setProgress(0);
               }}
             />
@@ -72,19 +123,18 @@ const ClientStories = () => {
             />
           </div>
         </div>
-        <div className="">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={imageIndex}
-              initial={{ x: 50, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: -50, opacity: 0 }}
-              transition={{ duration: 0.7, ease: "backOut" }}
-            >
-              <ExampleStory />
-            </motion.div>
-          </AnimatePresence>
-        </div>
+
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={storyIndex}
+            initial={{ x: 50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: -50, opacity: 0 }}
+            transition={{ duration: 0.7, ease: "backOut" }}
+          >
+            <ExampleStory story={stories[storyIndex]} />
+          </motion.div>
+        </AnimatePresence>
       </div>
     </div>
   );
