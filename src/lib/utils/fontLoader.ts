@@ -13,19 +13,19 @@ const criticalFonts: FontFace[] = [
     family: 'Plus Jakarta Sans',
     weight: 400,
     style: 'normal',
-    src: '/src/assets/fonts/plus_jakarta_sans/PlusJakartaSans-Regular.ttf'
+    src: '/fonts/plus_jakarta_sans/PlusJakartaSans-Regular.ttf'
   },
   {
     family: 'Plus Jakarta Sans',
     weight: 500,
     style: 'normal',
-    src: '/src/assets/fonts/plus_jakarta_sans/PlusJakartaSans-Medium.ttf'
+    src: '/fonts/plus_jakarta_sans/PlusJakartaSans-Medium.ttf'
   },
   {
     family: 'Inter',
     weight: 400,
     style: 'normal',
-    src: '/src/assets/fonts/inter/Inter-Regular.ttf'
+    src: '/fonts/inter/Inter-Regular.ttf'
   }
 ];
 
@@ -35,31 +35,31 @@ const nonCriticalFonts: FontFace[] = [
     family: 'Plus Jakarta Sans',
     weight: 600,
     style: 'normal',
-    src: '/src/assets/fonts/plus_jakarta_sans/PlusJakartaSans-SemiBold.ttf'
+    src: '/fonts/plus_jakarta_sans/PlusJakartaSans-SemiBold.ttf'
   },
   {
     family: 'Plus Jakarta Sans',
     weight: 700,
     style: 'normal',
-    src: '/src/assets/fonts/plus_jakarta_sans/PlusJakartaSans-Bold.ttf'
+    src: '/fonts/plus_jakarta_sans/PlusJakartaSans-Bold.ttf'
   },
   {
     family: 'Plus Jakarta Sans',
     weight: 800,
     style: 'normal',
-    src: '/src/assets/fonts/plus_jakarta_sans/PlusJakartaSans-ExtraBold.ttf'
+    src: '/fonts/plus_jakarta_sans/PlusJakartaSans-ExtraBold.ttf'
   },
   {
     family: 'Inter',
     weight: 600,
     style: 'normal',
-    src: '/src/assets/fonts/inter/Inter-SemiBold.ttf'
+    src: '/fonts/inter/Inter-SemiBold.ttf'
   },
   {
     family: 'Inter',
     weight: 700,
     style: 'normal',
-    src: '/src/assets/fonts/inter/Inter-Bold.ttf'
+    src: '/fonts/inter/Inter-Bold.ttf'
   }
 ];
 
