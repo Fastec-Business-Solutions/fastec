@@ -16,8 +16,8 @@ const ExampleStory = ({ story }: ExampleStoryProps) => {
       <img
         loading="lazy"
         className="min-[530px]:absolute right-[-28px] max-md:right-[-30px] bottom-0 max-md:w-[250px] max-md:h-[250px]"
-        src={Images.Person3.src}
-        alt={Images.Person3.alt}
+        src={story.image.src}
+        alt={story.image.alt}
       />
       <img
         loading="lazy"

@@ -1,15 +1,20 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-import { AnimatePresence, motion } from "framer-motion";
-import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
+import { AnimatePresence, motion } from 'framer-motion';
+import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 
-import RoundedDesign from "../common/RoundedDesign";
-import ExampleStory from "./ExampleStory";
+import RoundedDesign from '../common/RoundedDesign';
+import ExampleStory from './ExampleStory';
+import { Images } from '../../lib/utils/Images';
 
 export type Story = {
   id: number;
   content: string;
   author: string;
+  image: {
+    src: string;
+    alt: string;
+  };
 };
 
 const stories: Story[] = [
@@ -19,7 +24,11 @@ const stories: Story[] = [
     leading to significant growth and improved efficiency. Their team's professionalism, expertise, and dedication were outstanding. 
     We highly recommend FASTEC to anyone seeking top-notch consultancy services.
 `,
-    author: "Mrs. Anna Tech Yu Yan (Singapore)",
+    author: 'Mrs. Anna Tech Yu Yan (Singapore)',
+    image: {
+      src: Images.Person4.src,
+      alt: Images.Person4.alt,
+    },
   },
   {
     id: 2,
@@ -28,7 +37,11 @@ const stories: Story[] = [
      A trusted partner in every sense.
 
     `,
-    author: "Mrs. Fhranches Palattao Luyun (Philippines)",
+    author: 'Mrs. Fhranches Palattao Luyun (Philippines)',
+    image: {
+      src: Images.Person5.src,
+      alt: Images.Person5.alt,
+    },
   },
   {
     id: 3,
@@ -38,7 +51,11 @@ const stories: Story[] = [
     They've proven to be a reliable and valued partner every step of the way.
 
     `,
-    author: "Mrs. Kanyanat Meesaeng (Thailand)",
+    author: 'Mrs. Kanyanat Meesaeng (Thailand)',
+    image: {
+      src: Images.Person4.src,
+      alt: Images.Person4.alt,
+    },
   },
   {
     id: 4,
@@ -46,7 +63,11 @@ const stories: Story[] = [
     FASTEC is more than just a consultancy — they're a true partner in progress. 
    Their knowledgeable team and strategic guidance led to measurable improvements in our operations and growth.
     `,
-    author: "Mrs. Jenny Lou Collanter Adornado (Philippines)",
+    author: 'Mrs. Jenny Lou Collanter Adornado (Philippines)',
+    image: {
+      src: Images.Person5.src,
+      alt: Images.Person5.alt,
+    },
   },
   {
     id: 5,
@@ -54,7 +75,11 @@ const stories: Story[] = [
     With FASTEC by our side, we experienced real transformation. Their support, expertise, 
     and commitment helped our business move forward with confidence and success.
     `,
-    author: "Mrs. Nurul Hafizah Binti Zakaria (Malaysia)",
+    author: 'Mrs. Nurul Hafizah Binti Zakaria (Malaysia)',
+    image: {
+      src: Images.Person4.src,
+      alt: Images.Person4.alt,
+    },
   },
 ];
 
@@ -135,7 +160,7 @@ const ClientStories = () => {
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: -50, opacity: 0 }}
-            transition={{ duration: 0.7, ease: "backOut" }}
+            transition={{ duration: 0.7, ease: 'backOut' }}
           >
             <ExampleStory story={stories[storyIndex]} />
           </motion.div>
