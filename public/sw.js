@@ -2,9 +2,9 @@
 const CACHE_NAME = 'fastec-v1';
 const urlsToCache = [
   '/',
-  '/src/assets/fonts/plus_jakarta_sans/PlusJakartaSans-Regular.ttf',
-  '/src/assets/fonts/plus_jakarta_sans/PlusJakartaSans-Medium.ttf',
-  '/src/assets/fonts/inter/Inter-Regular.ttf',
+  '/fonts/plus_jakarta_sans/PlusJakartaSans-Regular.ttf',
+  '/fonts/plus_jakarta_sans/PlusJakartaSans-Medium.ttf',
+  '/fonts/inter/Inter-Regular.ttf',
   '/favicon.svg'
 ];
 
