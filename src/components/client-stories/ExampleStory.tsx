@@ -14,16 +14,19 @@ const ExampleStory = ({ story }: ExampleStoryProps) => {
         </p>
       </div>
       <img
+        loading="lazy"
         className="min-[530px]:absolute right-[-28px] max-md:right-[-30px] bottom-0 max-md:w-[250px] max-md:h-[250px]"
         src={Images.Person3.src}
         alt={Images.Person3.alt}
       />
       <img
+        loading="lazy"
         className="absolute right-[-22px] top-[-52px] max-sm:top-[-32px] max-sm:w-[40px] max-sm:h-[40px] w-auto h-auto"
         src={Images.ImageHighLighter.src}
         alt={Images.ImageHighLighter.alt}
       />
       <img
+        loading="lazy"
         className="absolute -z-10 left-[-98px] top-[-104px] max-md:left-[-60px] max-md:top-[-70px] w-[200px] md:w-[300px] lg:w-auto"
         src={Images.PersonEffect.src}
         alt={Images.PersonEffect.alt}

@@ -129,12 +129,14 @@ const ContactUs = () => {
       className="relative min-h-screen w-full flex items-center  lg:py-10 md:p-6 md:justify-center xl:px-5  max-[860px]:flex max-[860px]:flex-col py-5"
     >
       <img
+        loading="lazy"
         src={Images.ContactUsBackground.src}
         alt={Images.ContactUsBackground.alt}
         className="w-full h-full absolute top-0 left-0 -z-10 object-cover"
       />
       <div className="absolute left-0 bottom-0 w-full pointer-events-none">
         <img
+          loading="lazy"
           src={Images.BackgroundEffect.src}
           alt={Images.BackgroundEffect.alt}
           className="w-full"
@@ -166,7 +168,12 @@ const ContactUs = () => {
           </p>
         </div>
         <div className="flex w-full justify-center lg:justify-end max-sm:h-[60px]">
-          <img src={Icons.Arrow.src} alt={Icons.Arrow.alt} />
+          <img
+            loading="lazy"
+            src={Icons.Arrow.src}
+            alt={Icons.Arrow.alt}
+            className="w-auto h-auto"
+          />
         </div>
       </div>
       <div className="flex-1 min-[860px]:flex items-center justify-center w-full">
