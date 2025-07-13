@@ -7,9 +7,9 @@ const cardData = [
   null,
   { number: "03", title: "Public Relations Management", isHighlighted: true },
   { number: "04", title: "Maximised Efficiency", isHighlighted: false },
-  { number: "05", title: "Tailored solutions", isHighlighted: true },
+  { number: "05", title: "Business growth Solutions", isHighlighted: true },
   null,
-  { number: "06", title: "Tailored solutions", isHighlighted: false },
+  { number: "06", title: "Flexible Business Support", isHighlighted: false },
   { number: "07", title: "Personalised consultancy", isHighlighted: false },
 ];
 
@@ -18,8 +18,8 @@ const visibleCardData = [
   { number: "02", title: "Expertise in corporation", isHighlighted: true },
   { number: "03", title: "Public Relations Management", isHighlighted: true },
   { number: "04", title: "Maximised Efficiency", isHighlighted: false },
-  { number: "05", title: "Tailored solutions", isHighlighted: true },
-  { number: "06", title: "Tailored solutions", isHighlighted: false },
+  { number: "05", title: "Business growth Solutions", isHighlighted: true },
+  { number: "06", title: "Flexible Business Support", isHighlighted: false },
   { number: "07", title: "Personalised consultancy", isHighlighted: false },
 ];
 
