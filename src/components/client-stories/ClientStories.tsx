@@ -19,7 +19,7 @@ const stories: Story[] = [
     leading to significant growth and improved efficiency. Their team's professionalism, expertise, and dedication were outstanding. 
     We highly recommend FASTEC to anyone seeking top-notch consultancy services.
 `,
-    author: "Mrs. Anna Tech Yu Yan ( Singapore)",
+    author: "Mrs. Anna Tech Yu Yan (Singapore)",
   },
   {
     id: 2,
@@ -28,32 +28,33 @@ const stories: Story[] = [
      A trusted partner in every sense.
 
     `,
-    author: "Mrs. Fhranches Palattao Luyun (Philippines)",
+    author: "Mrs. Fhranches Palattao Luyun (Philippines)",
   },
   {
     id: 3,
     content: `
-    We are truly grateful for FASTEC’s support. 
+    We are truly grateful for FASTEC's support. 
     Their expertise and professional commitment helped us achieve new levels of growth and efficiency. 
-    They’ve proven to be a reliable and valued partner every step of the way.
+    They've proven to be a reliable and valued partner every step of the way.
 
     `,
-    author: "Mrs. Kanyanat Meesaeng (Thailand)",
+    author: "Mrs. Kanyanat Meesaeng (Thailand)",
   },
   {
     id: 4,
     content: `
-   FASTEC is more than just a consultancy — they’re a true partner in progress. 
+    FASTEC is more than just a consultancy — they're a true partner in progress. 
    Their knowledgeable team and strategic guidance led to measurable improvements in our operations and growth.
     `,
-    author: "Mrs. Jenny Lou Collanter Adornado (Philippines)",
+    author: "Mrs. Jenny Lou Collanter Adornado (Philippines)",
   },
   {
     id: 5,
     content: `
-    With FASTEC by our side, we experienced real transformation. Their support, expertise, and commitment helped our business move forward with confidence and success.
+    With FASTEC by our side, we experienced real transformation. Their support, expertise, 
+    and commitment helped our business move forward with confidence and success.
     `,
-    author: "Mrs. Nurul Hafizah Binti Zakaria ( Malaysia)",
+    author: "Mrs. Nurul Hafizah Binti Zakaria (Malaysia)",
   },
 ];
 
@@ -72,12 +73,14 @@ const ClientStories = () => {
           setStoryIndex((idx) => (idx + 1) % stories.length);
           return 0;
         }
+
         return prev + increment;
       });
     }, intervalMs);
 
     return () => clearInterval(interval);
   }, []);
+
   return (
     <div
       id="about-us"
@@ -102,7 +105,9 @@ const ClientStories = () => {
               isTransparent={true}
               isPointer={true}
               onClick={() => {
-                setStoryIndex((prev) => (prev - 1 + 3) % 3);
+                setStoryIndex(
+                  (prev) => (prev - 1 + stories.length) % stories.length
+                );
                 setProgress(0);
               }}
             />
@@ -111,7 +116,7 @@ const ClientStories = () => {
               size="large"
               isPointer={true}
               onClick={() => {
-                setStoryIndex((prev) => (prev + 1) % 3);
+                setStoryIndex((prev) => (prev + 1) % stories.length);
                 setProgress(0);
               }}
             />
